@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  color: white;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  padding: 50px;
+}
+
+.counter {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.prizes {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.click-button {
+  background: linear-gradient(90deg, #ff416c, #ff4b2b);
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 5px 15px rgba(255, 65, 108, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.click-button:hover {
+  background: linear-gradient(90deg, #ff4b2b, #ff416c);
+  box-shadow: 0px 8px 20px rgba(255, 75, 43, 0.6);
+}
+
+.click-button:active {
+  transform: scale(0.95);
+  box-shadow: 0px 3px 10px rgba(255, 65, 108, 0.3);
+}
+
+.click-button {
+  position: relative;
+  overflow: hidden;
+}
+
+.click-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 10.01%);
+  transition: transform 0.6s, opacity 0.6s;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+}
+
